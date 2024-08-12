@@ -42,28 +42,14 @@ public class MainProgram
 		{
 			System.out.println(question);
 			String ans = sc.nextLine();
-			String answer = question.getAnswer().toString();
-			if(ans.equals(answer))
+			System.out.println("--------------------------------------------");
+			if(dao.answer(question, ans))
 				System.out.println("Correct Answer");
 			else
 				System.out.println("Wrong Answer");
 			System.out.println("--------------------------------------------");
 		}
 		
-		
-		
-		// To get Java Question
-				for (QuestionDTO question : list.JavaQuestion()) 
-				{
-					System.out.println(question);
-					String ans = sc.nextLine();
-					String answer = question.getAnswer().toString();
-					if(ans.equals(answer))
-						System.out.println("Correct Answer");
-					else
-						System.out.println("Wrong Answer");
-					System.out.println("--------------------------------------------");
-				}
 				
 				sc.close();
 	}
